@@ -9,118 +9,136 @@ $fonts-info: 'Cairo', sans-serif;
 $fonts-contents: 'PT Serif', serif;
 $font-jp: 'Shippori Mincho', serif;
 
-h1{
-    margin: .5rem 0;
-}
-
 img{
-    width: 100%;
+    height: 100%;
 }
 button{
     background-color: transparent;
-    color: $clr-white;
     margin: .5rem;
 }
 ul{
     @include flexR;
-    justify-content: center;
-    li{
-        padding: .5rem 1rem;
-        font-family: $fonts-info;
-    }
+    justify-content: center
 }
 
 .base-container{
     @include flexC;
-    
     height: 100%;
     color: $clr-black;
     position: relative;
-	-webkit-animation: color-change-4x 6s linear infinite alternate both;
-	animation: color-change-4x 6s linear infinite alternate both;
+	  -webkit-animation: color-change-4x 6s linear infinite alternate both;
+	  animation: color-change-4x 6s linear infinite alternate both;
 }
-
 
 header{
     text-align: center;
     color: $clr-black;
     font-family: $fonts-art;
     padding: 3rem 0;
+    width: 100%;
     h1{
         font-size: 4rem;
     }
-
-
-
+}
+.resume-nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba($clr-black, .3);
+    color: $clr-white;
+    z-index: 10;
+    li{
+      margin: 0 1rem;
+      padding: 0;
+    }
+    li img{
+      height: 2rem;
+  }
 }
 
 .main{
-    @include flexR;
-    justify-content: center;
+    @include flexC;
+    width: 100%;
+}
+
+
+.main-resume{
+    @include flexC;
     background-color: rgba($clr-white, .7);
     color: $clr-black;
     width: 95%;
+    max-width: 750px;
+    padding: 1.5rem;
     -webkit-box-shadow: 8px 8px 8px -2px rgba(0,0,0,0.65); 
     box-shadow: 8px 8px 8px -2px rgba(0,0,0,0.65);
-    
-}
-
-
-
-.resume-nav{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    font-size: smaller;
-    background-color: rgba($clr-black, .8);
-    color: $clr-white;
-    z-index: 10;
-}
-.main-resume{
+    .main-header{
     position: relative;
-}
-
-.main-img{
-    @include flexC;
-    position: absolute;
-    right: .5rem;
-    top: 5rem;
-    height: 8rem;
-    width: 8rem;
-
-    background-color: $clr-white;
-    button{
-        color: red;
     }
-
-}
-
-
-article{
-    padding: .5rem;
-    font-family: $font-jp;
-    width: 75%;
-    min-height: 300px;
-
-
-    h1{
-        text-align: center;
+    .main-img{
+        @include flexC;
+        position: absolute;
+    }
+    .img-box{
+      background-color: $clr-white;
+    }
+    article{
+        min-width: 300px;
+        width: 95%;
     }
 }
-
 table{
     width: 100%;
     border-collapse: collapse;
 
+    caption{
+      padding: .5rem 0;
+    }
+}
+
+.resume-jp{
+  font-family: $font-jp;
+  position: relative;
+    td, th {
+        border: 1px solid $clr-black;
+        text-align: left;
+        padding: .5rem;
+    }
+  .main-img{
+      right: 0rem;
+      top: 1rem;
+      height: 10rem;
+      width: 8rem;
+  }
+    display: none;
+
+
 }
 
 
-td, th {
-    border: 1px solid $clr-black;
-    text-align: left;
-    padding: .5rem 1rem;
-}
 
+
+.resume-en{
+  font-family: $fonts-contents;
+  
+  .main-header{
+    @include flexR;
+    
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+    .main-img{
+      width: 10rem;
+    }
+    td, th {
+
+        padding: 1rem;
+    }
+    .main-content{
+      display: none!important;
+    }
+
+  }
+}
 
 
 
@@ -129,7 +147,6 @@ footer{
     text-align: center;
     padding: 1rem 0;
     color: $clr-black;
-
     font-family: $fonts-info;
 }
 
@@ -161,7 +178,4 @@ footer{
   100% {
     background: #C9DDF8;
   }
-}
-li img{
-  height: 2rem;
 }
