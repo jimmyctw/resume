@@ -1,0 +1,181 @@
+@import "init";
+@import "mixin";
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Indie+Flower&family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
+$clr-black: rgb(0,0,0);
+$clr-white: rgb(255, 255, 255);
+$fonts-art: 'Indie Flower', cursive;
+$fonts-info: 'Cairo', sans-serif;
+$fonts-contents: 'PT Serif', serif;
+$font-jp: 'Shippori Mincho', serif;
+
+img{
+    height: 100%;
+}
+button{
+    background-color: transparent;
+    margin: .5rem;
+}
+ul{
+    @include flexR;
+    justify-content: center
+}
+
+.base-container{
+    @include flexC;
+    height: 100%;
+    color: $clr-black;
+    position: relative;
+	  -webkit-animation: color-change-4x 6s linear infinite alternate both;
+	  animation: color-change-4x 6s linear infinite alternate both;
+}
+
+header{
+    text-align: center;
+    color: $clr-black;
+    font-family: $fonts-art;
+    padding: 3rem 0;
+    width: 100%;
+    h1{
+        font-size: 4rem;
+    }
+}
+.resume-nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba($clr-black, .3);
+    color: $clr-white;
+    z-index: 10;
+    li{
+      margin: 0 1rem;
+      padding: 0;
+    }
+    li img{
+      height: 2rem;
+  }
+}
+
+.main{
+    @include flexC;
+    width: 100%;
+}
+
+
+.main-resume{
+    @include flexC;
+    background-color: rgba($clr-white, .7);
+    color: $clr-black;
+    width: 95%;
+    max-width: 750px;
+    padding: 1.5rem;
+    -webkit-box-shadow: 8px 8px 8px -2px rgba(0,0,0,0.65); 
+    box-shadow: 8px 8px 8px -2px rgba(0,0,0,0.65);
+    .main-header{
+    position: relative;
+    }
+    .main-img{
+        @include flexC;
+        position: absolute;
+    }
+    .img-box{
+      background-color: $clr-white;
+    }
+    article{
+        min-width: 300px;
+        width: 95%;
+    }
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+
+    caption{
+      padding: .5rem 0;
+    }
+}
+
+.resume-jp{
+  font-family: $font-jp;
+  position: relative;
+    td, th {
+        border: 1px solid $clr-black;
+        text-align: left;
+        padding: .5rem;
+    }
+  .main-img{
+      right: 0rem;
+      top: 1rem;
+      height: 10rem;
+      width: 8rem;
+  }
+    display: none;
+
+
+}
+
+
+
+
+.resume-en{
+  font-family: $fonts-contents;
+  
+  .main-header{
+    @include flexR;
+    
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+    .main-img{
+      width: 10rem;
+    }
+    td, th {
+
+        padding: 1rem;
+    }
+    .main-content{
+      display: none!important;
+    }
+
+  }
+}
+
+
+
+
+footer{
+    text-align: center;
+    padding: 1rem 0;
+    color: $clr-black;
+    font-family: $fonts-info;
+}
+
+
+@-webkit-keyframes color-change-4x {
+  0% {
+    background: #C4FDEC;
+  }
+  33.3333% {
+    background: #95ADB6;
+  }
+  66.666% {
+    background: #C2EFFF;
+  }
+  100% {
+    background: #C9DDF8;
+  }
+}
+@keyframes color-change-4x {
+  0% {
+    background: #C4FDEC;
+  }
+  33.3333% {
+    background: #C9F7F8;
+  }
+  66.666% {
+    background: #C2EFFF;
+  }
+  100% {
+    background: #C9DDF8;
+  }
+}
