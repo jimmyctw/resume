@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <!-- main css -->
+    <link rel="stylesheet" href="/css/main.css">
+    <script defer type="module" src="/app.js"></script>
+    <title>Jimmy's Resume</title>
+</head>
+<body>
+    <div class="base-container">
+
+        <header>
+            <div>
+                <h1>Jimmy's Resume</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href=""><img src="/imgs/germany.svg" alt="DEUTSCH"></a></li>
+                    <li><a href=""><img src="/imgs/japan.svg" alt="日本語"></a></li>
+                    <li><a href=""><img src="/imgs/united-states.svg" alt="ENGLISH"></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        
+        <nav class="resume-nav">
+            <ul>
+                <li><a href="#navResume">履歴書</a></li>
+                <li><a href="#navEdu">学歴</a></li>
+                <li><a href="#navAct">サークル</a></li>
+                <li><a href="#navLang">言語能力</a></li>
+                <li><a href="#navDev">フロントエンド</a></li>
+            </ul>
+        </nav>
+
+
+        <main class="main">
+            <article class="main-resume" id="navResume">
+                <h1>履歴書</h1>
+                <table class="resume-table">
+                    <tr>
+                        <th>氏名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;チェン&nbsp;ツミン&nbsp;　CHEN TsuーMin　</th>
+                    </tr>
+                    <tr>
+                        <th>生年月日&nbsp;&nbsp;&nbsp;&nbsp;平成4年&nbsp;8月&nbsp;14日 </th>
+                    </tr>
+                    <tr>
+                        <th>国籍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;台湾 </th>
+                    </tr>
+                    <tr>
+                        <th>性別&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;男 </th>
+                    </tr>
+                </table>
+                <div class="main-img">
+                    <div class="img-box"><img src="/imgs/author1.png" alt="profile picture"></div>
+                    <button id="img-btn"><i class="fas fa-redo-alt"></i></button>
+                </div>
+            </article>
+            <article class="main-history"　id="navEdu">
+                <h1>学歴</h1>
+                <table>
+                    <tr>
+                        <th>年</th>
+                        <th>月</th>
+                        <th>学校</th>
+                    </tr>
+                    <tr>
+                        <td>平成22年</td>
+                        <td>9</td>
+                        <td>台湾 · 輔仁大学 入学 ( B.A. )<br>
+                            &nbsp;専攻：ドイツ語文学科</td>
+                    </tr>
+                    <tr>
+                        <td>平成27年</td>
+                        <td>6</td>
+                        <td>輔仁大学　卒業</td>
+                    </tr>
+                    <tr>
+                        <td>平成28年</td>
+                        <td>10</td>
+                        <td>ドイツ · ハイデルベルク大学 入学 ( M.A. )<br>
+                            &nbsp;専攻：国際連携文化越境専攻 / 分野：社会・経済・統治<br>
+                            &nbsp;副専攻：日本研究</td>
+                    </tr>
+                    <tr>
+                        <td>平成29年</td>
+                        <td>10</td>
+                        <td>京都大学文学研究科 <br>
+                            &nbsp;(交換留学)　入学 #JASSO 奨学金を獲得</td>
+                    </tr>
+                    <tr>
+                        <td>平成30年</td>
+                        <td>9</td>
+                        <td>京都大学文学研究科　終了</td>
+                    </tr>
+                    <tr>
+                        <td>令和1年</td>
+                        <td>10</td>
+                        <td>ハイデルベルク大学 卒業</td>
+                    </tr>
+                </table>
+            </article>
+            <article  class="main-activity" id="navAct">
+                <h1>サークル</h1>
+                <table>
+                    <tr>
+                        <td>年</td>
+                        <td>組織</td>
+                    </tr>
+                    <tr>
+                        <td>平成23年</td>
+                        <td>日本台湾学生会議　</td>
+                    </tr>
+                    <tr>
+                        <td>平成23年-25年</td>
+                        <td>台湾大学言語交換サークル</td>
+                    </tr>
+                    <tr>
+                        <td>平成24年-25年</td>
+                        <td>輔仁大学の異文化交流プログラム　</td>
+                    </tr>
+                </table>
+            </article>
+            <article  class="main-lan"　id="navLang">
+                <h1>言語能力</h1>
+                <table>
+                    <tr>
+                        <th>言語</th>
+                        <th>検定</th>
+                    </tr>
+
+                    <tr>
+                        <td>日本語</td>
+                        <td>JLPT　N1</td>
+                    </tr>
+                    <tr>
+                        <td>ドイツ語</td>
+                        <td>Test DaF ４</td>
+                    </tr>
+                    <tr>
+                        <td>英語</td>
+                        <td>IELTS 6.5 </td>
+                    </tr>
+                    <tr>
+                        <td>中国語</td>
+                        <td>ネイティブ</td>
+                    </tr>
+                </table>
+            </article>
+
+            <article class="main-dev" id="navDev">
+                <h1>フロントエンド</h1>
+                <table>
+                    <tr>
+                        <th>スキル</th>
+                    </tr>
+                    <tr>
+                        <td>HTML,&nbsp; CSS&nbsp;(SASS),&nbsp; JavaScript&nbsp;(jQuery),<br> Photoshop,&nbsp; Github</td>
+                    </tr>
+                </table>
+            </article>
+            
+
+
+
+        </main>
+
+        <footer>
+            <h3>Jimmy's Resume 2021</h3>
+            <span><a href="https://jimmy2.netlify.app/#/">Hire Jimmy <i class="fas fa-paper-plane"></i></a></span>
+
+        </footer>
+    </div>
+</body>
+</html>

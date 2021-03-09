@@ -1,0 +1,166 @@
+@import "init";
+@import "mixin";
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Indie+Flower&family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
+$clr-black: rgb(0,0,0);
+$clr-white: rgb(255, 255, 255);
+$fonts-art: 'Indie Flower', cursive;
+$fonts-info: 'Cairo', sans-serif;
+$fonts-contents: 'PT Serif', serif;
+$font-jp: 'Shippori Mincho', serif;
+
+h1{
+    margin: 1rem 0;
+}
+
+img{
+    width: 100%;
+}
+button{
+    background-color: transparent;
+    color: $clr-white;
+    margin: .5rem;
+}
+ul{
+    @include flexR;
+    justify-content: center;
+    li{
+        padding: .5rem 5%;
+        font-family: $fonts-info;
+    }
+}
+
+.base-container{
+    @include flexC;
+    
+    height: 100%;
+    color: $clr-black;
+    position: relative;
+	-webkit-animation: color-change-4x 6s linear infinite alternate both;
+	animation: color-change-4x 6s linear infinite alternate both;
+}
+
+
+header{
+    text-align: center;
+    color: $clr-black;
+    font-family: $fonts-art;
+    padding: 2rem 0;
+    h1{
+        font-size: 4rem;
+    }
+    li img{
+        width: 3rem;
+    }
+
+
+}
+
+.main{
+    @include flexR;
+    justify-content: center;
+    background-color: rgba($clr-white, .7);
+    color: $clr-black;
+    width: 95%;
+    -webkit-box-shadow: 8px 8px 8px -2px rgba(0,0,0,0.65); 
+    box-shadow: 8px 8px 8px -2px rgba(0,0,0,0.65);
+    
+}
+
+
+
+.resume-nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    font-size: smaller;
+    background-color: rgba($clr-black, .8);
+    color: $clr-white;
+    z-index: 10;
+}
+.main-resume{
+    position: relative;
+}
+
+.main-img{
+    @include flexC;
+    position: absolute;
+    right: .5rem;
+    top: 5rem;
+    height: 8rem;
+    width: 8rem;
+
+    background-color: $clr-white;
+    button{
+        color: red;
+    }
+
+}
+
+
+article{
+    padding: .5rem;
+    font-family: $font-jp;
+    width: 75%;
+    min-height: 300px;
+
+
+    h1{
+        text-align: center;
+    }
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: .5rem 1rem;
+}
+
+
+
+
+
+footer{
+    text-align: center;
+    padding: 1rem 0;
+    color: $clr-black;
+
+    font-family: $fonts-info;
+}
+
+
+@-webkit-keyframes color-change-4x {
+  0% {
+    background: #C4FDEC;
+  }
+  33.3333% {
+    background: #95ADB6;
+  }
+  66.666% {
+    background: #C2EFFF;
+  }
+  100% {
+    background: #C9DDF8;
+  }
+}
+@keyframes color-change-4x {
+  0% {
+    background: #C4FDEC;
+  }
+  33.3333% {
+    background: #C9F7F8;
+  }
+  66.666% {
+    background: #C2EFFF;
+  }
+  100% {
+    background: #C9DDF8;
+  }
+}
