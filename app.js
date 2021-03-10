@@ -7,14 +7,18 @@ const imgBtn = document.getElementsByClassName('img-btn');
 const imgBox = document.getElementsByClassName('img-box');
 
 
-jpBtn.addEventListener('click',
+ enBtn.addEventListener('click',
     ()=>{
+        resumeJp.classList.remove('displayNone')
+        resumeEn.classList.remove('displayNone')
         mainIntro.classList.add('displayNone')
         resumeJp.classList.toggle('displayNone')
     }
 )
-enBtn.addEventListener('click',
+jpBtn.addEventListener('click',
     ()=>{
+        resumeJp.classList.remove('displayNone')
+        resumeEn.classList.remove('displayNone')
         mainIntro.classList.add('displayNone')
         resumeEn.classList.toggle('displayNone')
     }
