@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
 $clr-black: rgb(0,0,0);
 $clr-white: rgb(255, 255, 255);
+$clr-red: #fa2216;
 $fonts-art: 'Indie Flower', cursive;
 $fonts-info: 'Cairo', sans-serif;
 $fonts-contents: 'PT Serif', serif;
@@ -55,6 +56,9 @@ header{
       padding: 0;
       font-size: 2rem;
     }
+    li a:hover, li a:active, li a:focus{
+      color: $clr-red;
+    }
 }
 
 .main{
@@ -69,7 +73,6 @@ header{
     height: 100%;
     object-fit: contain;
   }
-
 }
 
 .main-resume{
@@ -174,7 +177,7 @@ footer{
     text-align: center;
     padding: 1rem 0;
     color: $clr-black;
-    font-family: $fonts-info;
+    font-family: $fonts-art;
     .mailBtn{
       -webkit-animation: vibrate-1 0.3s linear infinite both;
           animation: vibrate-1 0.3s linear infinite both;
