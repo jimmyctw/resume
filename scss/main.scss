@@ -1,318 +1,365 @@
 @import "init";
 @import "mixin";
-@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Indie+Flower&family=PT+Serif&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
-$clr-black: rgb(0,0,0);
-$clr-white: rgb(255, 255, 255);
-$clr-red: #fa2216;
-$fonts-art: 'Indie Flower', cursive;
-$fonts-info: 'Cairo', sans-serif;
-$fonts-contents: 'PT Serif', serif;
-$font-jp: 'Shippori Mincho', serif;
 
-img{
-    height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Noto+Sans+JP&family=Open+Sans+Condensed:wght@300&family=Playfair+Display&display=swap');
+
+body{
+    position: relative;
+    overflow-x: hidden;
 }
-button{
-    background-color: transparent;
+
+li{
     margin: .5rem;
 }
-ul{
-    @include flexR;
-    justify-content: center
+i{
+    font-size: 3rem;
+}
+img{
+    width: 100%;
+}
+$font-jp1: 'M PLUS Rounded 1c', sans-serif;
+$font-jp2: 'Noto Sans JP', sans-serif;
+$font-en1: 'Open Sans Condensed', sans-serif;
+$font-en2: 'Playfair Display', serif;
+
+$clr-white: #fffffa;
+$clr-black: #000103;
+$clr-blue: #3E92CC;
+
+
+
+@mixin teamItem{
+    .team-item{
+        width: 15rem;
+        height: 20rem;
+        margin: 2rem!important;
+    }
+    .item-img{
+        width: 15rem;
+        width: 15rem;
+        clip-path: circle(50% at 50% 50%);
+        object-fit: cover;
+        background-color: rgba($clr-white, .5);
+	-webkit-animation: color-change-3x 4s linear infinite alternate both;
+	        animation: color-change-3x 4s linear infinite alternate both;
+        img{
+            width: 100%;
+        }
+    }
+    .item-info{
+        @include flexC;
+        height: 5rem;
+        font-size: 1.5rem;
+    }
 }
 
-.base-container{
-    @include flexC;
-    height: 100%;
-    color: $clr-black;
-    position: relative;
-	  -webkit-animation: color-change-4x .5s linear infinite alternate both;
-	  animation: color-change-4x .5s linear infinite alternate both;
+
+.displayNone{
+    display: none;
 }
 
 
-.resume-nav{
-    position: fixed;
+
+
+#nav{
+    margin: 0;
     top: 0;
-    width: 100%;
-    background-color: rgba($clr-black, .5);
-    color: $clr-white;
+    position:sticky;
     z-index: 10;
+    font-family: $font-en2;
+
+}
+
+
+
+
+
+.main-box{
+    @include flexC;
+    min-height: 55vh;
+    .box-title{
+        font-family: $font-en2;
+        h1{
+            font-size: 3.5rem;
+            margin: 4rem 0;
+        }
+    }
+    .box-content{
+        font-family: $font-jp2;
+        font-size: 2rem;
+        padding: .5rem 1rem;
+    }
+}
+main,footer{
+    @include flexC;
+    background-color: $clr-black;
+    color: $clr-white;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+// ------------------- value
+
+
+.value-box{
     ul{
-      @include flexR;
-      justify-content: space-around;
-    }
-    li{
-      padding: 0;
-      font-size: 2rem;
-    }
-    li a:hover, li a:active, li a:focus{
-      color: $clr-red;
-    }
-}
-
-.main{
-    @include flexC;
-    width: 100%;
-    padding: 3.5rem 0;
-}
-#mainIntro{
-  height: 85vh;
-	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  img{
-    height: 100%;
-    object-fit: contain;
-  }
-}
-
-.main-resume{
-    @include flexC;
-    background-color: rgba($clr-white, .7);
-    color: $clr-black;
-    width: 95%;
-    max-width: 750px;
-    padding: 1.5rem;
-    -webkit-box-shadow: 8px 8px 8px -2px rgba(0,0,0,0.65); 
-    box-shadow: 8px 8px 8px -2px rgba(0,0,0,0.65);
-	  -webkit-animation: slit-in-vertical 0.35s ease-out both;
-	  animation: slit-in-vertical 0.35s ease-out both;
-    border: .5px solid rgba($clr-black, .1);
-    .main-header{
-    position: relative;
-    }
-    .main-img{
         @include flexC;
     }
-    .img-box{
-      background-color: $clr-white;
-
-    }
-    article{
-        min-width: 300px;
-        width: 95%;
-    }
-}
-
-table{
-    width: 100%;
-    border-collapse: collapse;
-    caption{
-      padding: .5rem 0;
-    }
-}
-
-.resume-jp{
-  font-family: $font-jp;
-  position: relative;
-    td, th {
-        border: 1px solid $clr-black;
-        text-align: left;
-        padding: .5rem;
-    }
-  .main-img{
-      position: absolute;
-      right: 0rem;
-      top: 3.6rem;
-      height: 7rem;
-      width: 8rem;
-  }
 }
 
 
 
+// ------------------- service
 
-.resume-en{
-  font-family: $fonts-contents;
-  
-  .main-header{
+.service-box{
+
+    .service-content{
+        @include flexR;        
+        justify-content: space-around;
+        >div{
+            @include flexC;   
+            min-width: 300px;     
+            justify-content: center;
+            margin: 1rem;
+        }
+    }
+    #carousel{
+        @include flexR;
+        height: 300px;
+        width: 300px;
+        overflow: hidden;
+    }
+    .service-item-img{
+        width: 300px;
+        overflow: hidden;
+        object-fit: contain;
+        border-radius: 1rem;
+
+    }
+
+    .service-item-list ul{
+        @include flexC;
+        li{
+            width: 300px;
+            padding: 0 1rem;
+            margin: .5rem 0;
+            text-align: center;
+            button, .serviceDetail{
+                font-family: $font-jp2;
+                width: 100%;
+                text-align: left;
+                background-color: transparent;
+                margin-bottom: .5rem;
+            }
+            .serviceDetail{
+	            -webkit-animation: scale-up-center 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	            animation: scale-up-center 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+            }
+
+        }
+
+    }
+
+}
+
+// ------------------- team
+
+.team-box{
+    .team-item-list{
+        @include flexR;
+    }
+    .team-item{
+        @include teamItem;
+        @include flexC;
+        font-family: $font-en1;
+
+    }
+    ul{
+        @include flexR;
+        justify-content: center;
+        li{
+            width: 250px;
+            margin: 1.5rem;
+            
+        }
+    }
+
+}
+
+
+.location-content{
     @include flexR;
-    padding: 1rem;
-    height: 10rem;
-    width: 100%;
-    justify-content: space-between;
-    position: relative;
-  }
-  .main-img{
-    width: 8rem;
-  }
-  td, th {
-      padding: .5rem 0;
-  }
-  tr{
-    border-bottom: 1px solid black;
-  }
+    justify-content: center;
+    >div{
+        margin: 3rem;
+    }
+    .location-map{
+        width: 300px;
+        height: 300px;
+       border-radius: 1rem;
+
+    }
+    .location-info{
+        @include flexC;
+        max-width: 350px;
+
+    }
+    ul{
+        @include flexR;
+        width: 100%;
+        justify-content: space-around;
+        li{
+            margin: 1rem;
+        }
+    }
 }
-.displayNone{
-  display: none;
+
+
+
+
+
+
+
+
+// ------------------- contact
+
+.contact-box{
+    form{
+        @include flexC;
+        font-size: 2rem;
+    }
+    label, input, textarea{
+        width: 300px;
+        margin: .5rem 0;
+        padding: 1rem;
+    }
+    label{
+        font-family: $font-en1;
+    }
+    input{
+        font-family: $font-jp1;
+    }
+    textarea, input{
+        border-radius: 1rem;
+        color: #000103;
+    }
+
+
+    #submitBtn{
+        width: 10rem;
+        height: 5rem;
+        margin-top: 1.5rem;
+        color: $clr-white;
+        background: transparent;
+        border: 1px solid $clr-white;
+    }
+
+}
+.confirmContainer{
+    @include flexC;
+    width: 300px;
+    border-radius: 1rem;
+    background-color: rgba($clr-white, .5);
+    .confirmCotent{
+        @include flexC;
+        width: 100%;
+    }
+
 
 }
 
 
+.confirmContainer{
+    background-color: $clr-black;
+    border: 1px solid $clr-white;
+    span, p{
+        font-size: 2rem;
+    }
+    #sendContent{
+        @include flexC;
+        align-items: flex-start;
+        padding: .5rem 1rem;
+        color: $clr-white;
+
+    }
+    .sendContentBtn{
+        width: 10rem;
+        height: 5rem;
+        margin: 1.5rem;
+        border-radius: 1rem;
+        background-color: $clr-black;
+
+        color: $clr-white;
+        border: 1px solid $clr-white;
+    }
+}
 
 footer{
+    padding: 2rem 0;
     text-align: center;
-    padding: 1rem 0;
-    color: $clr-black;
-    font-family: $fonts-art;
-    .mailBtn{
-      -webkit-animation: vibrate-1 0.3s linear infinite both;
-          animation: vibrate-1 0.3s linear infinite both;
+    font-size: 2rem;
+    font-family: $font-en2;
+    ul{
+        @include flexR;
+        justify-content: center;
+        li{
+            margin: 1.5rem;
+        }
     }
 }
 
 
 
 
-@media only screen and (max-width: 440px) {
-  .main-resume{
-    font-size:x-small;
-    .main-img{
-        top: 3rem;
-        right: 0rem;
-        width: 5rem;
-    }
+//--------------- service btn anime
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
   }
-  .resume-en{
-    .img-box{
-        top: 3rem;
-        right: 0rem;
-        width: 5rem;
-    }
-    p{
-      font-size: smaller;
-    }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 
-
-@-webkit-keyframes color-change-4x {
+//--------------- service btn anime
+@-webkit-keyframes color-change-3x {
   0% {
-    background: #C4FDEC;
+    background: #C7EDE4;
   }
-  33.3333% {
-    background: #95ADB6;
-  }
-  66.666% {
-    background: #C2EFFF;
+  50% {
+    background: #D5FFF3;
   }
   100% {
-    background: #C9DDF8;
+    background: #AF9AB2;
   }
 }
-@keyframes color-change-4x {
+@keyframes color-change-3x {
   0% {
-    background: #C4FDEC;
+    background: #C7EDE4;
   }
-  33.3333% {
-    background: #C9F7F8;
-  }
-  66.666% {
-    background: #C2EFFF;
+  50% {
+    background: #D5FFF3;
   }
   100% {
-    background: #C9DDF8;
-  }
-}
-@-webkit-keyframes slit-in-vertical {
-  0% {
-    -webkit-transform: translateZ(-800px) rotateY(90deg);
-            transform: translateZ(-800px) rotateY(90deg);
-    opacity: 0;
-  }
-  54% {
-    -webkit-transform: translateZ(-160px) rotateY(87deg);
-            transform: translateZ(-160px) rotateY(87deg);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateZ(0) rotateY(0);
-            transform: translateZ(0) rotateY(0);
-  }
-}
-@keyframes slit-in-vertical {
-  0% {
-    -webkit-transform: translateZ(-800px) rotateY(90deg);
-            transform: translateZ(-800px) rotateY(90deg);
-    opacity: 0;
-  }
-  54% {
-    -webkit-transform: translateZ(-160px) rotateY(87deg);
-            transform: translateZ(-160px) rotateY(87deg);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateZ(0) rotateY(0);
-            transform: translateZ(0) rotateY(0);
-  }
-}
-@-webkit-keyframes vibrate-1 {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  20% {
-    -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
-  }
-  40% {
-    -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
-  }
-  60% {
-    -webkit-transform: translate(2px, 2px);
-            transform: translate(2px, 2px);
-  }
-  80% {
-    -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
-@keyframes vibrate-1 {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  20% {
-    -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
-  }
-  40% {
-    -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
-  }
-  60% {
-    -webkit-transform: translate(2px, 2px);
-            transform: translate(2px, 2px);
-  }
-  80% {
-    -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-}
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+    background: #AF9AB2;
   }
 }
