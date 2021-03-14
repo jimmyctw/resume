@@ -62,7 +62,7 @@ submitBtn.addEventListener('click', (event)=>{
     if(fname !== '' && fmail !== '' && fmobile !== '' && fmessage !== ''){
         confirmContainerBuild(fname, fmail, fmobile, fmessage);
     }else{
-        alert('すべてのフィールドにちゃんと入力してください!!')
+        alert('すべてのフィールドにちゃんと入力してください!!');
     }
 })
 
