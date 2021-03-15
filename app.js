@@ -58,13 +58,20 @@ submitBtn.addEventListener('click', (event)=>{
     const fmail = document.getElementById('fmail').value;
     const fmobile = document.getElementById('fmobile').value;
     const fmessage = document.getElementById('fmessage').value;
-    if(fname !== '' && fmail !== '' && fmobile !== '' && fmessage !== ''){
-        confirmContainerBuild(fname, fmail, fmobile, fmessage);
-    }else{
-        alert('すべてのフィールドにちゃんと入力してください!!');
-        console.log('clicked')
 
+    if(fname === '' || fmail === '' || fmobile === '' || fmessage === ''){
+        alert('すべてのフィールドにちゃんと入力してください!!');
+    }else{
+        confirmContainerBuild(fname, fmail, fmobile, fmessage);
     }
+
+    // if(fname !== '' && fmail !== '' && fmobile !== '' && fmessage !== ''){
+    //     confirmContainerBuild(fname, fmail, fmobile, fmessage);
+    // }else{
+    //     alert('すべてのフィールドにちゃんと入力してください!!');
+    //     console.log('clicked')
+
+    // }
 })
 
 function confirmContainerBuild(fname, fmail, fmobile, fmessage){
