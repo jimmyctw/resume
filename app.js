@@ -1,10 +1,9 @@
 const serviceBtns = document.getElementsByClassName('serviceBtn');
 const formBox = document.getElementById('formBox')
 const headerImg = document.getElementById('headerImg')
-const headerChangeSet = setInterval(headerChange, 1500) 
-const serviceImgSlideSet = setInterval(serviceImgSlide, 1500)
+const headerChangeSet = setInterval(headerChange, 2000) 
+const serviceImgSlideSet = setInterval(serviceImgSlide, 2000)
 let imgNr = 1;
-
 
 
 
@@ -63,6 +62,7 @@ submitBtn.addEventListener('click', (event)=>{
         confirmContainerBuild(fname, fmail, fmobile, fmessage);
     }else{
         alert('すべてのフィールドにちゃんと入力してください!!');
+
     }
 })
 
