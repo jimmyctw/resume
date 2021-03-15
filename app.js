@@ -3,6 +3,7 @@ const formBox = document.getElementById('formBox')
 const headerImg = document.getElementById('headerImg')
 const headerChangeSet = setInterval(headerChange, 2000) 
 const serviceImgSlideSet = setInterval(serviceImgSlide, 2000)
+const formAlert = ()=> {alert('すべてのフィールドにちゃんと入力してください!!');}
 let imgNr = 1;
 
 
@@ -59,19 +60,11 @@ submitBtn.addEventListener('click', (event)=>{
     const fmobile = document.getElementById('fmobile').value;
     const fmessage = document.getElementById('fmessage').value;
 
-    if(fname === '' || fmail === '' || fmobile === '' || fmessage === ''){
-        alert('すべてのフィールドにちゃんと入力してください!!');
-    }else{
+    if(fname !== '' && fmail !== '' && fmobile !== '' && fmessage !== ''){
         confirmContainerBuild(fname, fmail, fmobile, fmessage);
+    }else{
+        formAlert();
     }
-
-    // if(fname !== '' && fmail !== '' && fmobile !== '' && fmessage !== ''){
-    //     confirmContainerBuild(fname, fmail, fmobile, fmessage);
-    // }else{
-    //     alert('すべてのフィールドにちゃんと入力してください!!');
-    //     console.log('clicked')
-
-    // }
 })
 
 function confirmContainerBuild(fname, fmail, fmobile, fmessage){
