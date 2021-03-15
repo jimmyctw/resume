@@ -62,6 +62,7 @@ submitBtn.addEventListener('click', (event)=>{
         confirmContainerBuild(fname, fmail, fmobile, fmessage);
     }else{
         alert('すべてのフィールドにちゃんと入力してください!!');
+        console.log('clicked')
 
     }
 })
