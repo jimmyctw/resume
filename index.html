@@ -4,278 +4,262 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
-    <!-- animation -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
     <!-- main css -->
     <link rel="stylesheet" href="/css/main.css">
-
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    
-    <!-- main js -->
-    <script defer type="module" src="/app.js"></script>
-    
-    
-    
-
-    <title>トアル株式会社</title>
+    <script defer src="/app.js"></script>
+    <title>Jimmy's Resume</title>
 </head>
 <body>
-    <nav class="navbar navbar-inverse" id="nav">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">トアル</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar" >
-                <ul class="nav navbar-nav">
-                    <li ><a href="#value">VALUE</a></li>
-                    <li ><a href="#service">SERVICE</a></li>
-                    <li ><a href="#team">TEAM</a></li>
-                    <li ><a href="#location">LOCATION</a></li>
-                    <li ><a href="#contact">CONTACT</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    
-    <main>
-        <header>
-            <div id="header" data-aos="fade-down">
-                <div class="header-img" id="headerImg">
-                    <img id="headerJp" src="/assets/headerjp.png" alt="company">
-                    <img id="headerEn" class="displayNone" src="/assets/headeren.png" alt="company">
-                </div>
-            </div>
-        </header>
-        <div class="main-box value-box" id="value" data-aos="fade-left">
-            <div class="box-title">
-                <h1>VALUE</h1>
-            </div>
-            <div class="box-content">
-                <ul>
-                    <li> &nbsp;売り手によし</li>
-                    <li> &nbsp;買い手によし</li>
-                    <li> &nbsp;世間によし&nbsp;</li>
-                </ul>
-            </div>
-        </div>
-        <div class="main-box service-box" id="service" data-aos="fade-right">
-            <div class="box-title">
-                <h1>SERVICE</h1>
-            </div>
-            <div class="box-content service-content">
-                <div class="carousel" id="carousel">
-                    
-                    <div class="service-item-img" id="serviceItem">
-                    </div>
-
-                </div>
+    <div class="base-container">
 
 
-                <div class="service-item-list">
-                    <ul>
-                        <li>
-                            <button class="serviceBtn">
-                                <i class="fas fa-hand-point-right"></i><i class="fas fa-hand-point-down displayNone"></i>&nbsp;&nbsp;WEB制作
-                            </button>
-                            <div class="serviceDetail displayNone">
-                                <span>&nbsp;-&nbsp;RWD、設計、更新、メンテナンス</span>
-                            </div>
-                        </li>
-                        <li>
-                            <button class="serviceBtn">
-                                <i class="fas fa-hand-point-right"></i><i class="fas fa-hand-point-down displayNone"></i>&nbsp;&nbsp;映像系
-                            </button>
-                            <div class="serviceDetail displayNone">
-                                <span>&nbsp;-&nbsp;バナー、サムネ、ポスター、ビラ</span>
-                            </div>
-                        </li>
-                        <li>
-                            <button class="serviceBtn">
-                                <i class="fas fa-hand-point-right"></i><i class="fas fa-hand-point-down displayNone"></i>&nbsp;&nbsp;SNS運営
-                            </button>
-                            <div class="serviceDetail displayNone">
-                                <span>
-                                    &nbsp;-&nbsp;フェイスブック、インスタ、ツイッター
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <button class="serviceBtn">
-                                <i class="fas fa-hand-point-right"></i><i class="fas fa-hand-point-down displayNone"></i>&nbsp;&nbsp;ITコンサルティング
-                            </button>
-                            <div class="serviceDetail displayNone">
-                                <span>&nbsp;-&nbsp;広告, 集客, BtoC</span>
-                            </div>
-                        </li>
-    
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="main-box team-box" id="team" data-aos="fade-left">
-            <div class="box-title">
-                <h1>TEAM</h1>
-            </div>
-            <div class="box-content team-item-list">
-                <ul>
-                    <li class="team-item">
-                        <div class="item-img">
-                            <img src="/assets/author/author1.png" alt="team member">
-                        </div>
-                        <div class="item-info">
-                            <h3>TK</h3>
-                            <span>CEO</span>
-                        </div>
-                    </li>
-                    <li class="team-item">
-                        <div class="item-img">
-                            <img src="/assets/author/author2.png" alt="team member">
-                        </div>
-                        <div class="item-info">
-                            <h3>YD</h3>
-                            <span>HR</span>
-                        </div>
-                    </li>
-                    <li class="team-item">
-                        <div class="item-img">
-                            <img src="/assets/author/author3.png"  alt="team member">
-                        </div>
-                        <div class="item-info">
-                            <h3>WB</h3>
-                            <span>Engineer</span>
-                        </div>
-                    </li>
-                    <li class="team-item">
-                        <div class="item-img">
-                            <img src="/assets/author/author4.png"  alt="team member">
-                        </div>
-                        <div class="item-info">
-                            <h3>YM</h3>
-                            <span>Auditor</span>
-                        </div>
-                    </li>
-                    <li class="team-item">
-                        <div class="item-img">
-                            <img src="/assets/author/author5.png" alt="team member">
-                        </div>
-                        <div class="item-info">
-                            <h3>TM</h3>
-                            <span>Sales Rep.</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="main-box location-box" id="location" data-aos="fade-right">
-            <div class="box-title">
-                <h1>LOCATION</h1>
-            </div>
-            <div class="box-content location-content">
-                <div class="location-map" id="locationMap">
-                </div>
-                <div class="location-info">
-                    <address>京都府京都市左京区丸太町通川端東入東竹屋町50</address>
-                    <p>最寄り駅：京阪電鉄神宮丸太町駅（丸太町通りを東に徒歩5分）<br>
-                    最寄りバス停：熊野神社前（丸太町通りを西に徒歩2分）</p>
-                    <ul>
-                        <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-        <div class="main-box contact-box" id="contact" data-aos="fade-left">
-            <div class="box-title">
-                <h1>CONTACT</h1>
-            </div>
-            <div class="box-content" id="formAndSend">
-                
-                <div class="form-box" id="formBox">
-                    <form action="">
-                        <label for="fname">NAME</label>
-                        <input type="text" id="fname" name="firstname" placeholder="お名前は...">
-
-                        <label for="fmail">E-mail</label>
-                        <input type="mail" id="fmail" name="email" placeholder="メール入力してください">
-                        
-                        <label for="fmobile">Phone Number</label>
-                        <input type="text" id="fmobile" name="mobile" placeholder="携帯番号入力してください">
-
-
-                        <label for="fmessage">Message</label>
-                        <textarea type="text" id="fmessage" name="message" placeholder="あのね...." style="height:200px"></textarea>
-                        
-                        <input id="submitBtn" type="button" value="Confirm">
-
-                    </form>
-                </div>
-
-
-            </div>
-        </div>
-
-    </main>
-    <footer>
-        <div class="sns-box">
+        <nav class="resume-nav">
             <ul>
-                <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#!"><i class="fab fa-youtube"></i></a></li>
+                <li id="jpBtn"><a href="#">JP</a></li>
+                <li id="enBtn"><a href="#">EN</a></li>
             </ul>
-        </div>
-        <div>
-            <span>トアル株式会社 TOARU inc.<br><br>All rights reserved 2021</span>
-        </div>
-    </footer>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-    <script>
-        AOS.init({
-            offset: 300,
-            duration: 1000
-        });
+        </nav>
 
 
-        // Initialize and add the map
-        function initMap() {
-            // The location of Uluru
-            const location = { lat: 35.016875, lng: 135.776038};
-            // The map, centered at Uluru
-            const map = new google.maps.Map(document.getElementById("locationMap"), {
-                zoom: 14,
-                center: location,
-            });
-            // The marker, positioned at Uluru
-            const marker = new google.maps.Marker({
-                position: location,
-                map: map,
-            });
-        }
-    </script>
+        <main class="main">
+            <div class="main-intro" id="mainIntro">
+                <img src="/imgs/introImg.png" alt="img">
+            </div>
+
+            <div class="main-resume resume-jp displayNone" id="resumeJp">
+                <article class="main-header" >
+                    <div>
+                        <table class="resume-table">
+                        <caption>履歴書</caption>
+                        <tr>
+                            <th>氏名:&nbsp;&nbsp;チェン&nbsp;&nbsp;ツミン</th>
+                        </tr>
+                        <tr>
+                            <th>生年月日:&nbsp;&nbsp;平成&nbsp;4年&nbsp;8月&nbsp;14日 </th>
+                        </tr>
+                        <tr>
+                            <th>国籍:&nbsp;&nbsp;台湾 </th>
+                        </tr>
+                        <tr>
+                            <th>性別:&nbsp;&nbsp;男 </th>
+                        </tr>
+                        </table>
+                    </div>
+                    <div class="main-img">
+                        <!-- <button id="img-btn"><i class="fas fa-redo-alt"></i></button> -->
+                        <div class="img-box"><img src="/imgs/author1.png" alt="profile picture"></div>
+                    </div>
+                </article>
+                <article class="main-content">
+                    <div>
+                        <table>
+                            <caption>学歴</caption>
+                            <tr>
+                                <th>年</th>
+                                <th>月</th>
+                                <th>学校</th>
+                            </tr>
+                            <tr>
+                                <td>平成22年</td>
+                                <td>9</td>
+                                <td>台湾 · 輔仁大学 入学 ( B.A. )<br>
+                                    &nbsp;専攻：ドイツ語学科</td>
+                            </tr>
+                            <tr>
+                                <td>平成27年</td>
+                                <td>6</td>
+                                <td>輔仁大学　卒業</td>
+                            </tr>
+                            <tr>
+                                <td>平成28年</td>
+                                <td>10</td>
+                                <td>ドイツ · ハイデルベルク大学 入学 ( M.A. )<br>
+                                    &nbsp;専攻：国際連携文化越境専攻 / 分野：社会・経済・統治<br>
+                                    &nbsp;副専攻：日本研究</td>
+                            </tr>
+                            <tr>
+                                <td>平成29年</td>
+                                <td>10</td>
+                                <td>京都大学文学研究科 (交換留学)<br>
+                                    &nbsp;入学 #JASSO 奨学金を獲得</td>
+                            </tr>
+                            <tr>
+                                <td>平成30年</td>
+                                <td>9</td>
+                                <td>京都大学文学研究科　終了</td>
+                            </tr>
+                            <tr>
+                                <td>令和1年</td>
+                                <td>10</td>
+                                <td>ハイデルベルク大学 卒業</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table>
+                            <caption>サークル</caption>
+                            <tr>
+                                <th>年</th>
+                                <th>組織</th>
+                            </tr>
+                            <tr>
+                                <td>平成23年</td>
+                                <td>日本台湾学生会議　</td>
+                            </tr>
+                            <tr>
+                                <td>平成23年-25年</td>
+                                <td>台湾大学言語交換サークル</td>
+                            </tr>
+                            <tr>
+                                <td>平成24年-25年</td>
+                                <td>輔仁大学の異文化交流プログラム　</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table>
+                        <caption>スキル</caption>
+                        <tr>
+                            <th>言語能力</th>
+                            <th>フロントエンド</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                - 日本語 - JLPT　N1<br>
+                                - 英語 - IELTS 6.5<br>
+                                - 中国語 -ネイティブ<br>
+                                - ドイツ語-Test DaF ４<br>
+                            </td>
+                            <td>
+                                - HTML<br>
+                                - CSS&nbsp;&nbsp;(SASS)<br>
+                                - JavaScript&nbsp;&nbsp;(jQuery)<br>
+                                - Github<br>
+                                - Netlify<br>
+                                - Photoshop<br>
+                            </td>
+                        </tr>
+                        </table>
+                    </div>
+                    
+                </article>
+            </div>
+            <div class="main-resume resume-en displayNone" id="resumeEn">
+                <article class="main-header">
+                    <div>
+                        <table>
+                            <tr>
+                                March 2021 <br>
+                                JIMMY CHEN <br>
+                                Date of Birth: 14th August 1992 <br>
+                                jimmy70637@gmail.com
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="main-img">
+                        <div class="img-box"><img src="/imgs/author1.png" alt="profile picture"></div>
+                        <!-- <button><i class="fas fa-redo-alt"></i></button> -->
+                    </div>
+                </article>
+
+                <article class="main-content">
+                    <div>
+                        <h1>Jimmy CHEN</h1><br>
+                        <p>Jimmy is a self-taught newbie frontend web developer from Taiwan. He was born and raised in Taiwan. After finishing his Bachelor degree
+                        in Taiwan, he continued to study his Master in Germany. In the second year of his Master study, He did a one-year exchange
+                        program at Kyoto University. In 2019, He earned his Master degree at Heidelberg University. After that, he has been dedicated himself to learning web-developing skills.</p>
+                    </div>
+                    <div>
+                        <table>
+                            <caption> • Education</caption><br>
+                            <tr>
+                                <td>9/2010 - 8/2015</td>
+                                <td>BA: Fu-Jen Catholic University, Department of Foreign Languages<br>
+                                &nbsp;&nbsp;- Department of German Language & Culture</td>
+                            </tr>
+                            <tr>
+                                <td>9/2017 - 9/2018</td>
+                                <td>Kyoto University, Graduate School of Letters (Exchange Program)<br>
+                                    &nbsp;&nbsp;- Financed by JASSO Scholarship</td>
+                            </tr>
+                
+                            <tr>
+                                <td>10/2016 - 10/2019</td>
+                                <td>MA: Heidelberg University, Karl Jaspers Centre<br>
+                                &nbsp;&nbsp;- Major: Transcutural Studies (Focus: Society, Economy, Governance)<br>
+                                &nbsp;&nbsp;- Minor: Japanologie</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table>
+                            <caption> • Student Activity</caption><br>
+                            <tr>
+                                <td>2011</td>
+                                <td>Taiwan Japan Student Conference</td>
+                            </tr>
+                            <tr>
+                                <td>2011 - 2013</td>
+                                <td>NTU Multi-Language Conversation Club<br>
+                                &nbsp;&nbsp;- Organizer/ Coordinator</td>
+                            </tr>
+                            <tr>
+                                <td>2012 - 2013</td>
+                                <td>Cross-Cultural Learning Program (FJU)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table>
+                            <caption> • Skills</caption><br>
+                            <tr>
+                                <th>Languages</th>
+                                <th>Frontend</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ol>
+                                        <li> - Mandarin: Native</li>
+                                        <li> - English: IELTS 6.5</li>
+                                        <li> - Japanese: JLPT N1</li>
+                                        <li> - German: Test Daf 4</li>
+                                    </ol>
+                                </td>
+                                <td>
+                                    - HTML<br>
+                                    - CSS&nbsp;&nbsp;(SASS)<br>
+                                    - JavaScript&nbsp;&nbsp;(jQuery)<br>
+                                    - Github<br>
+                                    - Netlify<br>
+                                    - Photoshop<br>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </article>
+
+            </div>
 
 
-    <!-- googlemap -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbfGYJKSG_Sdz_SfkIKEvp4REufFMb1-8&callback=initMap&libraries=&v=weekly"></script>
 
+        </main>
+
+
+
+
+
+
+        <footer>
+            <div class="mailBtn">
+                <a href="mailto:jimmy70637@gmail.com"><i class="fas fa-paper-plane"></i></a>
+            </div>
+            <span>All rights reserved 2021</span>
+        </footer>
+    </div>
 </body>
 </html>
