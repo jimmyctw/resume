@@ -13,10 +13,7 @@ $font-jp: 'Shippori Mincho', serif;
 img{
     height: 100%;
 }
-button{
-    background-color: transparent;
-    margin: .5rem;
-}
+
 ul{
     @include flexR;
     justify-content: center
@@ -24,19 +21,19 @@ ul{
 
 .base-container{
     @include flexC;
-    height: 100%;
+    width: 100%;
     color: $clr-black;
     position: relative;
+    overflow-x: hidden;
 	  -webkit-animation: color-change-4x .5s linear infinite alternate both;
 	  animation: color-change-4x .5s linear infinite alternate both;
 }
-
 
 .resume-nav{
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba($clr-black, .5);
+    background-color: rgba($clr-black, .7);
     color: $clr-white;
     z-index: 10;
     ul{
@@ -55,47 +52,49 @@ ul{
 .main{
     @include flexC;
     width: 100%;
-    padding: 3.5rem 0;
+    height: 100%;
+    padding: 4rem 0;
 }
 
 
 .main-intro{
   @include flexC;
-  height: 85vh;
+  height: 90vh;
+  padding: 2rem 0;
 	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   
   .intro-img{
-    height: 55%;
+    height: 75%;
+    padding-top: 3rem;
     svg{
       height: 100%;
       object-fit: contain;
     }
   }
 }
+
+
 .intro-ctrlBar{
   @include flexC;
-  background-color: rgba($clr-black, .5);
+  background-color: rgba($clr-black, .7);
+  width: 100%;
+  max-width: 400px;
   border-radius: 1rem;
   padding: .5rem;
   color: $clr-white;
-  .intro-msg{
-    font-family: $fonts-art;
-  
-  }
+  font-family: $fonts-art;
 }
 
 
 
 .slidecontainer{
   @include flexC;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   justify-content: space-between;
-  width: 90%;
-  min-width: 300px;
+  width: 100%;
   padding: .3rem;
   height: 3.5rem;
-  // background-color: red;
   label{
     font-family: $fonts-art;
     width: 15%
