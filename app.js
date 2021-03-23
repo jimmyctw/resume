@@ -6,7 +6,7 @@ const mainIntro = document.getElementById('mainIntro');
 const introSvg = document.getElementById('introSvg');
 const redCtrl = document.getElementById('redCtrl');
 const greenCtrl = document.getElementById('greenCtrl');
-const blueCtrl = document.getElementById('redCtrl');
+const blueCtrl = document.getElementById('blueCtrl');
 
 
 
